@@ -1,61 +1,33 @@
 #include "ofApp.h"
 
-//--------------------------------------------------------------
 void ofApp::setup(){
-
+    
+    ofBackground(0);
+    
 }
 
-//--------------------------------------------------------------
 void ofApp::update(){
-
+    
+    for (int i = 0; i < rockets.size(); i ++){
+        rockets[i].update();
+    }
+    
+    
 }
 
-//--------------------------------------------------------------
 void ofApp::draw(){
+    
+    for (int i = 0; i < rockets.size(); i ++){
+        rockets[i].draw();
+    }
 
 }
 
-//--------------------------------------------------------------
-void ofApp::keyPressed(int key){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::keyReleased(int key){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseMoved(int x, int y ){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseDragged(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button){
 
-}
-
-//--------------------------------------------------------------
-void ofApp::windowResized(int w, int h){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::gotMessage(ofMessage msg){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
-
+    ofVec2f mouse;
+    mouse.set(x,y);
+    rocket.setup(mouse);
+    rockets.push_back(rocket);
+    
 }
