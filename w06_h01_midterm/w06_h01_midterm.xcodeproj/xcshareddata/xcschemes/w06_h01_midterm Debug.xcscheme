@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-               BuildableName = "w03_h02_lookie.app"
-               BlueprintName = "w03_h02_lookie"
-               ReferencedContainer = "container:w03_h02_lookie.xcodeproj">
+               BuildableName = "w06_h01_midterm.app"
+               BlueprintName = "w06_h01_midterm"
+               ReferencedContainer = "container:w06_h01_midterm.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "w03_h02_lookie.app"
-            BlueprintName = "w03_h02_lookie"
-            ReferencedContainer = "container:w03_h02_lookie.xcodeproj">
+            BuildableName = "w06_h01_midterm.app"
+            BlueprintName = "w06_h01_midterm"
+            ReferencedContainer = "container:w06_h01_midterm.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "w03_h02_lookie.app"
-            BlueprintName = "w03_h02_lookie"
-            ReferencedContainer = "container:w03_h02_lookie.xcodeproj">
+            BuildableName = "w06_h01_midterm.app"
+            BlueprintName = "w06_h01_midterm"
+            ReferencedContainer = "container:w06_h01_midterm.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "w03_h02_lookie.app"
-            BlueprintName = "w03_h02_lookie"
-            ReferencedContainer = "container:w03_h02_lookie.xcodeproj">
+            BuildableName = "w06_h01_midterm.app"
+            BlueprintName = "w06_h01_midterm"
+            ReferencedContainer = "container:w06_h01_midterm.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
