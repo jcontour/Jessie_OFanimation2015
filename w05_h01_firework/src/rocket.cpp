@@ -21,6 +21,7 @@ void Rocket::setup(ofVec2f _pos){
         explosions.push_back(explosion);
     }
     
+    isExploded = false;
 }
 
 
@@ -29,13 +30,18 @@ void Rocket::update(){
     pos = startpos * (1 - pct) + finalpos * pct;
     
     if (pct < 1){
-        pct += .01;
+        pct += .02;
     } else {
         pct = 1;
+        isExploded = true;
         for (int i = 0; i < explosions.size(); i++) {
             explosions[i].resetforces();
             explosions[i].applyforces();
             explosions[i].update();
+            
+            if (explosions[i].alpha <= 0){
+                explosions.erase(explosions.begin() + i);
+            }
 
         }
     }
@@ -47,8 +53,11 @@ void Rocket::update(){
 
 void Rocket::draw(){
     
+    
     ofSetColor(255,0,0);
+    if (!isExploded){
     ofCircle(pos, 5);
+    }
     
     if (pct == 1){
         for (int i = 0; i < explosions.size(); i++) {

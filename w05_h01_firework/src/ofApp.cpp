@@ -27,6 +27,7 @@ void ofApp::mouseReleased(int x, int y, int button){
 
     ofVec2f mouse;
     mouse.set(x,y);
+    Rocket rocket;
     rocket.setup(mouse);
     rockets.push_back(rocket);
     

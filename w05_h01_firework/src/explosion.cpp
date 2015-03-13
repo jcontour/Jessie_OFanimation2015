@@ -11,8 +11,15 @@
 void Explosion::setup(ofVec2f _pos){
     pos = _pos;
     
-    vel.x = ofRandom(-2,2);
-    vel.y = ofRandom(-1, -5);
+    float radius = ofRandom(0,4);
+    float angle = ofRandom(0, 360);
+    
+    vel.x = cos(angle)* radius;
+    vel.y = sin(angle)* radius;
+    
+    
+//    vel.x = ofRandom(-2,2);
+//    vel.y = ofRandom(-1, -5);
     
     gravity.set(0, 0.1);
     alpha = 255;

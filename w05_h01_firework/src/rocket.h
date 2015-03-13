@@ -23,5 +23,7 @@ public:
     Explosion explosion;
     vector<Explosion> explosions;
     
+    bool isExploded;
+    
     
 };

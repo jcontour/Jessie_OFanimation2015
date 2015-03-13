@@ -13,7 +13,7 @@ class ofApp : public ofBaseApp{
         void mouseReleased(int x, int y, int button);
 
         
-    Rocket rocket;
+//    Rocket rocket;
     vector<Rocket> rockets;
 
 };
