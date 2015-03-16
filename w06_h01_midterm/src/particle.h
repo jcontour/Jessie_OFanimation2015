@@ -23,5 +23,9 @@ public:
     ofVec2f pos, vel, acc;
     
     ofColor col;
+    int goal;
+    int lifespan;
+    
+    float rotation;
 
 };

@@ -10,6 +10,8 @@
 
 Particle::Particle(ofVec2f _pos) {
     pos.set(_pos);
+    goal = 0;
+    lifespan = 1000;
 }
 
 void Particle::resetForces() {
@@ -26,7 +28,18 @@ void Particle::applyDamping(float damping){
 
 void Particle::update() {
     vel += acc;
+    
+    ofVec2f prevPoint;
+    prevPoint.set(pos);
     pos += vel;
+    
+    ofVec2f difference;
+    difference = prevPoint - pos;
+    rotation = atan2(difference.y, difference.x);
+    rotation = ofRadToDeg(rotation);
+
+    
+    lifespan -= ofRandom(-1, 1);
 }
 
 void Particle::draw() {
@@ -34,11 +47,12 @@ void Particle::draw() {
     ofSetColor(255);
     ofPushMatrix();
     ofTranslate(pos);
-//    ofRotate(rot);
+    ofRotate(rotation);
     ofBeginShape(); {
-        ofVertex(0, 5);
-        ofVertex(2.5, 0);
-        ofVertex(-2.5, 0);
+        ofVertex(0, 7);
+        ofVertex(-15, 0);
+        ofVertex(0, -7);
+        ofVertex(-5, 0);
     } ofEndShape(true);
     ofPopMatrix();
     
