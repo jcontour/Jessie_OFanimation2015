@@ -27,5 +27,6 @@ public:
     int lifespan;
     
     float rotation;
+    
 
 };

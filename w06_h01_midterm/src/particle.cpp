@@ -12,6 +12,9 @@ Particle::Particle(ofVec2f _pos) {
     pos.set(_pos);
     goal = 0;
     lifespan = 1000;
+    
+    
+    
 }
 
 void Particle::resetForces() {
@@ -40,10 +43,11 @@ void Particle::update() {
 
     
     lifespan -= ofRandom(-1, 1);
+
 }
 
 void Particle::draw() {
-
+    
     ofSetColor(255);
     ofPushMatrix();
     ofTranslate(pos);

@@ -8,25 +8,25 @@
 
 #include "attractor.h"
 
-Attractor::Attractor(ofVec2f _pos){
+Attractor::Attractor(ofVec2f _pos, int _offset){
     
     pos = _pos;
-    state = 1;
+    offset = _offset;
 
 }
 
 void Attractor::update(){
     
-    if (state == 1) {    col.set(255,0,0);   }
-    if (state == 2) {    col.set(0,0,255);   }
-    if (state == 3) {    col.set(0);         }
+    float sinOfTime = sin(ofGetElapsedTimef()*3+offset);
+    radius = ofMap(sinOfTime, -1, 1, 5 , 10);
+    
     
 }
 
 void Attractor::draw(){
 
-    ofSetColor(col);
-    ofCircle(pos, 10);
+    ofSetColor(255, 0, 0);
+    ofCircle(pos, radius);
     
 }
 

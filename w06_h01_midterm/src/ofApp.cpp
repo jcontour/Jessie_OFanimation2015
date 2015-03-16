@@ -4,6 +4,7 @@
 void ofApp::setup(){
     
     ofBackground (0);
+    ofSetBackgroundAuto(false);
     for (int i = 0; i < 50; i ++) {
         ofVec2f pos;
         pos.set(ofRandom(0, ofGetWidth()), ofRandom(0, ofGetHeight()));
@@ -36,7 +37,7 @@ void ofApp::update(){
             particles[i].applyDamping(0.05);
             particles[i].update();
             
-            if (distance < 5){
+            if (distance < 30){
                 particles[i].goal ++;
                 if (particles[i].goal >= attractors.size()){
                     particles[i].goal = 0;
@@ -66,13 +67,17 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     
+    ofSetColor(0, 150);
+    ofRect(0, 0, ofGetWidth(), ofGetHeight());
+    
     for (int i = 0; i < particles.size(); i ++){
         for (int j = 0; j < particles.size(); j++){
             ofVec2f particleDiff = particles[i].pos - particles[j].pos;
             float particleDistance = particleDiff.length();
             
             if (particleDistance < 100) {
-                ofSetColor(255,0,0, 100);
+                float mapCol = ofMap(particleDistance, 0, 100, 255, 0);
+                ofSetColor(mapCol, 50);
                 ofLine(particles[i].pos, particles[j].pos);
             }
         }
@@ -81,6 +86,16 @@ void ofApp::draw(){
     
     for (int i = 0; i < attractors.size(); i ++){
         attractors[i].draw();
+        for (int j = 0; j <particles.size(); j++){
+            ofVec2f attractDiff = attractors[i].pos - particles[j].pos;
+            float attractDist = attractDiff.length();
+            
+            if (attractDist < 50) {
+                ofSetColor(255, 0, 0);
+                ofLine (attractors[i].pos, particles[j].pos);
+            }
+            
+        }
     }
     
 }
@@ -89,7 +104,7 @@ void ofApp::draw(){
 void ofApp::mouseReleased(int x, int y, int button){
     ofVec2f pos;
     pos.set(x,y);
-    Attractor attractor(pos);
+    Attractor attractor(pos, attractors.size());
     attractors.push_back(attractor);
 }
 

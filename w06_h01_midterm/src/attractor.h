@@ -12,12 +12,12 @@
 class Attractor{
 public:
     
-    Attractor(ofVec2f _pos);
+    Attractor(ofVec2f _pos, int _offset);
     void update();
     void draw();
     
     ofVec2f pos;
-    int state;
-    ofColor col;
+    float radius;
+    int offset;
     
 };
