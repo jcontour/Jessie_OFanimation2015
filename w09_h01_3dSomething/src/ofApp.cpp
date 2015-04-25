@@ -48,22 +48,22 @@ void ofApp::keyPressed(int key){
     
     switch (key) {
         case 'q' | 'Q':
-            pointPos.x += 2;
+            pointPos.x += 5;
             break;
         case 'a' | 'A' :
-            pointPos.x -= 2;
+            pointPos.x -= 5;
             break;
         case 'w' | 'W' :
-            pointPos.y += 2;
+            pointPos.y += 5;
             break;
         case 's' | 'S' :
-            pointPos.y -= 2;
+            pointPos.y -= 5;
             break;
         case 'e' | 'E' :
-            pointPos.z += 2;
+            pointPos.z += 5;
             break;
         case 'd' | 'D' :
-            pointPos.z -= 2;
+            pointPos.z -= 5;
             break;
         default:
             break;

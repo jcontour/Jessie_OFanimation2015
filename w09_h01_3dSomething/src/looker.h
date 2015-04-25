@@ -17,6 +17,8 @@ public:
     void draw();
     
 private:
+    
+    float rot;
     float rotX, rotY, rotZ;
     ofVec3f pos;
     ofVec3f diff;
