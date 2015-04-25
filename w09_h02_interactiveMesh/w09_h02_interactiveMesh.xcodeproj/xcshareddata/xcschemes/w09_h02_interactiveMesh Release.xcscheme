@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-               BuildableName = "w03_h01_harmony.app"
-               BlueprintName = "w03_h01_harmony"
-               ReferencedContainer = "container:w03_h01_harmony.xcodeproj">
+               BuildableName = "w09_h02_interactiveMesh.app"
+               BlueprintName = "w09_h02_interactiveMesh"
+               ReferencedContainer = "container:w09_h02_interactiveMesh.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "w03_h01_harmony.app"
-            BlueprintName = "w03_h01_harmony"
-            ReferencedContainer = "container:w03_h01_harmony.xcodeproj">
+            BuildableName = "w09_h02_interactiveMesh.app"
+            BlueprintName = "w09_h02_interactiveMesh"
+            ReferencedContainer = "container:w09_h02_interactiveMesh.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "w03_h01_harmony.app"
-            BlueprintName = "w03_h01_harmony"
-            ReferencedContainer = "container:w03_h01_harmony.xcodeproj">
+            BuildableName = "w09_h02_interactiveMesh.app"
+            BlueprintName = "w09_h02_interactiveMesh"
+            ReferencedContainer = "container:w09_h02_interactiveMesh.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "w03_h01_harmony.app"
-            BlueprintName = "w03_h01_harmony"
-            ReferencedContainer = "container:w03_h01_harmony.xcodeproj">
+            BuildableName = "w09_h02_interactiveMesh.app"
+            BlueprintName = "w09_h02_interactiveMesh"
+            ReferencedContainer = "container:w09_h02_interactiveMesh.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
