@@ -27,7 +27,6 @@
 		E7E077E815D3B6510020DFD4 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E715D3B6510020DFD4 /* QTKit.framework */; };
 		E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F985F515E0DE99003869B5 /* Accelerate.framework */; };
 		F293F7301AEBEA0300E6A11A /* looker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F293F72E1AEBEA0300E6A11A /* looker.cpp */; };
-		F293F7331AEBEED400E6A11A /* target.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F293F7311AEBEED400E6A11A /* target.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,8 +85,6 @@
 		E7F985F515E0DE99003869B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = /System/Library/Frameworks/Accelerate.framework; sourceTree = "<absolute>"; };
 		F293F72E1AEBEA0300E6A11A /* looker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = looker.cpp; sourceTree = "<group>"; };
 		F293F72F1AEBEA0300E6A11A /* looker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = looker.h; sourceTree = "<group>"; };
-		F293F7311AEBEED400E6A11A /* target.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = target.cpp; sourceTree = "<group>"; };
-		F293F7321AEBEED400E6A11A /* target.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = target.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,8 +187,6 @@
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				F293F72E1AEBEA0300E6A11A /* looker.cpp */,
 				F293F72F1AEBEA0300E6A11A /* looker.h */,
-				F293F7311AEBEED400E6A11A /* target.cpp */,
-				F293F7321AEBEED400E6A11A /* target.h */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
 			);
 			path = src;
@@ -295,7 +290,6 @@
 			files = (
 				F293F7301AEBEA0300E6A11A /* looker.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
-				F293F7331AEBEED400E6A11A /* target.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

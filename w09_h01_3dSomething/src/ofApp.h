@@ -2,7 +2,6 @@
 
 #include "ofMain.h"
 #include "looker.h"
-#include "target.h"
 
 class ofApp : public ofBaseApp{
 
@@ -15,8 +14,7 @@ class ofApp : public ofBaseApp{
     looker look;
     vector<looker> lookers;
     
-    target pointAt;
-    ofVec3f pointPos;
+    ofVec3f pointAt;
     
     ofEasyCam cam;
 		

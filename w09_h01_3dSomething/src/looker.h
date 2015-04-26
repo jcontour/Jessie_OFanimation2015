@@ -18,8 +18,7 @@ public:
     
 private:
     
-    float rot;
-    float rotX, rotY, rotZ;
+    float rotX, rotY;
     ofVec3f pos;
     ofVec3f diff;
     

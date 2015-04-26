@@ -4,28 +4,23 @@ void ofApp::setup(){
     
     ofBackground(55);
     
-    pointAt.setup();
-    
-
-    for (int x = -5; x < 5; x++){
-        for (int y = -5; y < 5; y++){
-            for(int z = -5; z < 5; z++){
-                look.setup(x*50,y*50,z*50);
+    for (int x = -3; x < 3; x++){
+        for (int y = -3; y < 3; y++){
+            for(int z = -3; z < 3; z++){
+                look.setup(x*60,y*60,z*60);
                 lookers.push_back(look);
             }
         }
     }
     
-    pointPos.set(0,0,0);
+    pointAt.set(0,0,0);
 
 }
 
 void ofApp::update(){
     
-    pointAt.update(pointPos);
-
     for (int i = 0; i < lookers.size(); i++){
-        lookers[i].update(pointPos);
+        lookers[i].update(pointAt);
     }
     
 }
@@ -35,7 +30,10 @@ void ofApp::draw(){
     cam.begin();
     
     ofDrawAxis(100);
-    pointAt.draw();
+    
+    ofSetColor(255, 0, 0);
+    ofDrawSphere(pointAt, 5);
+    
     for (int i = 0; i < lookers.size(); i++){
         lookers[i].draw();
     }
@@ -49,22 +47,22 @@ void ofApp::keyPressed(int key){
     
     switch (key) {
         case 'q' | 'Q':
-            pointPos.x += 5;
+            pointAt.x += 5;
             break;
         case 'a' | 'A' :
-            pointPos.x -= 5;
+            pointAt.x -= 5;
             break;
         case 'w' | 'W' :
-            pointPos.y += 5;
+            pointAt.y += 5;
             break;
         case 's' | 'S' :
-            pointPos.y -= 5;
+            pointAt.y -= 5;
             break;
         case 'e' | 'E' :
-            pointPos.z += 5;
+            pointAt.z += 5;
             break;
         case 'd' | 'D' :
-            pointPos.z -= 5;
+            pointAt.z -= 5;
             break;
         default:
             break;
