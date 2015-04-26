@@ -19,23 +19,20 @@ void looker::update(ofVec3f _pointAt){
     pointAt.set(_pointAt.x, _pointAt.y, _pointAt.z);
     
     diff = pointAt - pos;
-    rot = pointAt.angle(pos);
-//    rotX = atan2( diff.y, diff.z);
-//    rotY = atan2( diff.x * cos(rotX), diff.z);
-//    rotZ = atan2( cos(rotX), sin(rotX) * sin(rotY));
+    ofVec3f norm = diff.normalize();
+    rotX = atan2(norm.y, sqrt(1 - norm.y * norm.y));
+    rotY = atan2(diff.x, diff.z);
 }
 
 void looker::draw(){
     
-    ofSetColor(255);
+    ofNoFill();
     
     ofPushMatrix();
     ofTranslate(pos);
-    ofRotate(rot);
-//    ofRotateX(ofRadToDeg(rotX));
-//    ofRotateY(ofRadToDeg(rotY));
-//    ofRotateZ(ofRadToDeg(rotZ));
-    ofDrawCone(0,0,0,3,12);
+    ofRotateX(rotX);
+    ofRotateY(rotY);
+    ofDrawBox(pos, 10);
     ofPopMatrix();
     
 }

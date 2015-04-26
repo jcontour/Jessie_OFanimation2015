@@ -34,6 +34,7 @@ void ofApp::draw(){
     
     cam.begin();
     
+    ofDrawAxis(100);
     pointAt.draw();
     for (int i = 0; i < lookers.size(); i++){
         lookers[i].draw();
