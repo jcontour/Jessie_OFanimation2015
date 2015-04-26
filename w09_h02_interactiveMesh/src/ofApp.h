@@ -19,6 +19,4 @@ class ofApp : public ofBaseApp{
     vector<pointsMove> points;
     vector<ofVec2f> pointPos;
     
-
-
 };
