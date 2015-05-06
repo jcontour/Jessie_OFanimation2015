@@ -10,57 +10,76 @@
 
 void creature::setup(float _x){
     
-    touched = false;
+    movingUp = false;
+    atTop = false;
+    movingDown = false;
     
-    timer1 = 0;
-    timer2 = 0;
-    timer3 = 0;
-
-    posy = 0;
-    pos.set(_x, ofGetWindowHeight()/2);
+    
     col.set(0,0,255);
+    
+    pos.set(_x, ofGetWindowHeight()/2);
     
 }
 
 void creature::update(){
     
-    if (touched){
-        timer1 ++;
-        turnRed();
+
+    if (movingUp) {
+        counter = 0;
+        if ( pos.y > ofGetWindowHeight()/2 - height ) {
+            pos.y -= 5;
+        } else {
+            movingUp = false;
+            atTop = true;
+        }
     }
     
-    if (timer1 > 100){
-        touched = false;
-        turnBlue();
+    if (atTop) {
+        counter ++;
+        if (counter > 60) {
+            atTop = false;
+            movingDown = true;
+        }
+    }
+    
+    if (movingDown) {
+        if ( pos.y < ofGetWindowHeight()/2) {
+            pos.y += 2;
+        } else {
+            movingDown = false;
+        }
     }
     
 }
 
 void creature::draw(){
+    float colorMap = ofMap(pos.y, ofGetWindowHeight()/2-100,
+                           ofGetWindowHeight()/2, 0, 255, true);
+    col.set(255-colorMap, 0, colorMap);
     ofSetColor(col);
     ofCircle(pos,30);
-
 }
 
-void creature::turnRed(){
-    col.set(255,0,0);
-    pos.y = ofGetWindowHeight()/2 - 30;
-}
-
-void creature::halfRed(){
-    col.set(150,0,150);
-    pos.y = ofGetWindowHeight()/2 - 15;
-}
-
-void creature::quarterRed(){
-    col.set(50,0,200);
-    pos.y = ofGetWindowHeight()/2 - 5;
+void creature::trigger(int _id) {
+    
+    triggerId = _id;
+    
+    if (_id == 1) {
+        height = 150;
+    }
+    
+    if (_id == 2) {
+        height = 75;
+    }
+    
+    if (_id == 3){
+        height = 25;
+    }
+    
+    movingUp = true;
     
 }
 
-void creature::turnBlue(){
-    col.set(0,0,255);
-    pos.y = ofGetWindowHeight()/2;
-    timer1 = 0;
-}
+
+
 
