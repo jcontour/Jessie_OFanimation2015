@@ -53,9 +53,11 @@ void creature::update(){
 }
 
 void creature::draw(){
+    
     float colorMap = ofMap(pos.y, ofGetWindowHeight()/2-100,
                            ofGetWindowHeight()/2, 0, 255, true);
     col.set(255-colorMap, 0, colorMap);
+    
     ofSetColor(col);
     ofCircle(pos,30);
 }
